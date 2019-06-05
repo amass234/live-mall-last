@@ -7,6 +7,8 @@ import moment from 'moment'
 import LayoutBase from './LayoutBase';
 
 const FormItem = Form.Item;
+const Option = Select.Option
+
 @inject('packageStore')
 @observer
 export class PackageList extends Component {
