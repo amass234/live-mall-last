@@ -3,7 +3,12 @@
   "scripts": {
     "dev": "node server.js -p $PORT",
     "build": "next build",
+<<<<<<< HEAD
     "start": "next start",
+=======
+    "heroku-postbuild": "next build",
+    "start": "next build && next start",
+>>>>>>> master
     "export": "next build && next export"
   },
   "dependencies": {
