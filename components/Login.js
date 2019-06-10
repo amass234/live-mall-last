@@ -27,14 +27,14 @@ export class Login extends Component {
     return (
       <div>
         {!user ? <Layout>
-          <Content>
+          <Content style={{ height: "100vh" }}>
             <div className="login_page">
               <Form onSubmit={this.handleSubmitForm} className="login-form">
                 <div style={{
                   margin: ' 1em auto 5em ',
                   textAlign: 'center',
                 }}>
-                  <img src='./static/ic_logo_square@3x.png' width="120" />
+                  <img src='/static/ic_logo_square@3x.png' width="120" />
                   <h6 style={{ fontWeight: '100', margin: 10 }}>Live Mall Control Panel</h6>
                 </div>
                 <h6 style={{ textAlign: 'center', margin: '1em', color: 'rgb(0, 124, 255)' }}>เข้าสู่ระบบ</h6>

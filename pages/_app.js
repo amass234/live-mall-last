@@ -2,8 +2,9 @@ import React from 'react'
 import App, { Container } from 'next/app'
 import { Provider } from 'mobx-react';
 import store from '../stores'
+import '../static/css/style.css'
 
-class MyApp extends App {
+ class MyApp extends App {
 
     static async getInitialProps({ Component, router, ctx }) {
 
@@ -27,5 +28,4 @@ class MyApp extends App {
         )
     }
 }
-
 export default MyApp

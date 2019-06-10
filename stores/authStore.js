@@ -34,6 +34,7 @@ class AuthStore {
     }
 
     @action getUser() {
+        this.loading = true
         Firebase.auth().onAuthStateChanged((user) => {
             if (user) {
                 this.user = user
@@ -64,7 +65,17 @@ class AuthStore {
         this.loading = true
         this.errors = undefined;
         return Firebase.auth().signInWithEmailAndPassword(this.values.email, this.values.password)
-            .then(() => Router.replace('/user?id=user').then(() => this.getUser(), _this.openNotificationWithIcon('success', `ยินดีต้อนรับกลับ`)))
+            .then(() => Router.replace('/user').then(() => this.getUser(), _this.openNotificationWithIcon('success', `ยินดีต้อนรับกลับ`)))
+            .catch((err) => this.openNotificationWithIcon('error', err.message))
+            .finally(action(() => { this.loading = false; }));
+    }
+
+    @action login2() {
+        const _this = this
+        this.loading = true
+        this.errors = undefined;
+        return Firebase.auth().signInWithEmailAndPassword(this.values.email, this.values.password)
+            .then(() => this.getUser(), _this.openNotificationWithIcon('success', `ยินดีต้อนรับกลับ`))
             .catch((err) => this.openNotificationWithIcon('error', err.message))
             .finally(action(() => { this.loading = false; }));
     }
