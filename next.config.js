@@ -19,6 +19,5 @@ module.exports = withCSS({
   exportPathMap: async function () {
     return defaultPathMap
   },
-  assetPrefix: 'https://livemall.me/backoffice/',
   cssLoaderOptions: { url: false }
 })
