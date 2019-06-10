@@ -4,11 +4,8 @@
     "dev": "node server.js -p $PORT",
     "build": "next build",
     "heroku-postbuild": "next build",
-<<<<<<< HEAD
     "start": "next build && next start",
-=======
     "start": "next build && pm2-runtime start ecosystem.config.js",
->>>>>>> master
     "export": "next build && next export"
   },
   "dependencies": {
