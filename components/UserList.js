@@ -1,5 +1,4 @@
 import React, { Component } from 'react'
-// import Link from 'next/link'
 import { List, Avatar, Form, Select, Tag, Input, Modal, Button, Divider } from 'antd'
 import { Col, Row } from 'reactstrap'
 import { inject, observer } from 'mobx-react';

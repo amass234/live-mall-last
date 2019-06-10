@@ -1,5 +1,4 @@
 import React, { Component } from 'react'
-import Link from 'next/link'
 import { List, Avatar, Form, Button, Modal, message, Input, Upload, Popconfirm, Tag, Checkbox } from 'antd'
 import { Col, Row } from 'reactstrap'
 import LayoutBase from './LayoutBase';
