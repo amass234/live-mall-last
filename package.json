@@ -3,9 +3,7 @@
   "scripts": {
     "dev": "node server.js -p $PORT",
     "build": "next build",
-    "heroku-postbuild": "next build",
-    "start": "next build && next start",
-    "start": "next build && pm2-runtime start ecosystem.config.js",
+    "start": "next start",
     "export": "next build && next export"
   },
   "dependencies": {
